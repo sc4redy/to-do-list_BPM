@@ -1,16 +1,40 @@
-# React + Vite
+## Deskripsi Tugas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Anda adalah **Frontend Engineer** di perusahaan **BPM (Business Process Engineering)**. Saat ini tim belum memiliki anggota **UI/UX**, sehingga Anda perlu kreatif dalam merancang tampilan aplikasi web. Aplikasi yang akan dibuat adalah **prototype to-do list** yang berjalan **secara offline**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Fitur yang Diharapkan
 
-## React Compiler
+Pengguna dapat melakukan aksi berikut:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Menambah, menghapus, dan mengedit tugas ✅ (DONE)
+- Menandai tugas sebagai **selesai** ✅ (DONE)
+- Melakukan **kategorisasi** pada to-do list ✅ (DONE)
+- **Filter** tugas berdasarkan: 
+  - Status ✅ (DONE)
+  - Kategori ✅ (DONE)
+  - Search keyword (kata kunci pencarian) ✅ (DONE)
+- Mendapatkan data dari **REST API publik** (contoh: cuaca, jam, lokasi, dll) ✅ (DONE)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Batasan dan Ketentuan
+
+- Gunakan **animasi loading** saat:
+  - Menginput data ✅ (DONE)
+  - Mengambil data dari API ✅ (DONE)
+- Gunakan **React** dengan **Redux-Saga** ✅ (DONE)
+- Gunakan **axios** atau **fetch** untuk mengambil data dari API ✅ (DONE)
+- Lampirkan **screenshot aplikasi** di `README.md` ✅ (DONE)
+
+---
+
+## Nilai Plus
+
+- Menggunakan **drag-and-drop** untuk mengurutkan daftar tugas ✅ (DONE)
+
+## Penjelasan Singkat
+
+Note:
+- Jika terjadi error saat refresh info waktu (Error: Network Error), terkadang harus banyak mengklik refresh berulang kali agar berhasil.
