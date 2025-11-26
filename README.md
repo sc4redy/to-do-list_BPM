@@ -34,7 +34,16 @@ Pengguna dapat melakukan aksi berikut:
 
 - Menggunakan **drag-and-drop** untuk mengurutkan daftar tugas ✅ (DONE)
 
-## Penjelasan Singkat
 
-Note:
+
+## Note
+
 - Jika terjadi error saat refresh info waktu (Error: Network Error), terkadang harus banyak mengklik refresh berulang kali agar berhasil.
+
+## Screenshot
+
+<img width="1165" height="886" alt="image" src="https://github.com/user-attachments/assets/e55f3302-c0f4-4f79-ab0d-1dea75a43c23" />
+
+## Link to video
+
+https://drive.google.com/file/d/10Xr9fRO0dGHgZyRQRZjaLPFMhDFkb5cu/view?usp=sharing
