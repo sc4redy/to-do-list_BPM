@@ -1,0 +1,345 @@
+/* src/App.css */
+
+.app-container {
+  max-width: 960px;
+  margin: 2.5rem auto;
+  padding: 1.75rem 1.5rem 2.5rem;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), #020617);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+/* ===== HEADER ===== */
+
+.app-container h1 {
+  margin: 0 0 1.5rem;
+  font-size: 2.4rem;
+  letter-spacing: 0.03em;
+}
+
+.app-subtitle {
+  margin-top: -0.8rem;
+  margin-bottom: 1.6rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ===== LAYOUT SECTIONS ===== */
+
+.todo-section,
+.api-section {
+  margin-top: 1.2rem;
+  padding: 1.2rem 1.1rem;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(circle at top left, #111827, #020617);
+  border: 1px solid var(--border-subtle);
+}
+
+.api-section {
+  margin-top: 1.7rem;
+}
+
+/* ===== FORM TASK ===== */
+
+.task-form {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.9rem;
+}
+
+.task-form input[type="text"] {
+  flex: 1;
+  padding: 0.55rem 0.7rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  background: #020617;
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.task-form input::placeholder {
+  color: #6b7280;
+}
+
+.task-form select {
+  padding: 0.55rem 0.7rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  background: #020617;
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.task-form button {
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-full);
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  transition: background 0.15s ease, transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+
+.task-form button:hover:not(:disabled) {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
+}
+
+.task-form button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* ===== FILTER PANEL ===== */
+
+.filter-panel {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.filter-panel select,
+.filter-panel input {
+  padding: 0.5rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: #020617;
+  color: var(--text-main);
+  font-size: 0.85rem;
+}
+
+.filter-panel input {
+  flex: 1;
+}
+
+/* ===== TASK LIST ===== */
+
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 0.8rem;
+  margin-bottom: 0.5rem;
+  border-radius: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    background 0.12s ease, border-color 0.12s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-soft);
+  background: var(--bg-card-soft);
+}
+
+.task-item.dragging {
+  background: #111827;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7);
+  transform: scale(1.01);
+}
+
+.task-item.done .task-title {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.task-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.task-main input[type="checkbox"] {
+  margin-top: 0.15rem;
+  width: 16px;
+  height: 16px;
+}
+
+.task-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.task-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.12rem;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.task-actions button {
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.task-actions button:first-of-type {
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+}
+
+.task-actions button:first-of-type:hover {
+  background: rgba(99, 102, 241, 0.28);
+}
+
+.delete-btn {
+  background: rgba(239, 68, 68, 0.16);
+  color: var(--danger);
+}
+
+.delete-btn:hover {
+  background: rgba(239, 68, 68, 0.28);
+}
+
+/* edit mode */
+
+.task-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.task-edit input,
+.task-edit select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background: #020617;
+  color: var(--text-main);
+  font-size: 0.85rem;
+}
+
+/* ===== API PANEL ===== */
+
+.api-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.api-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.api-header h2 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.api-header button {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+}
+
+.api-header button:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.api-header button:disabled {
+  opacity: 0.7;
+}
+
+.api-loading {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.api-error {
+  font-size: 0.85rem;
+  color: var(--danger);
+}
+
+.api-data {
+  font-size: 0.85rem;
+  background: #020617;
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border-subtle);
+}
+
+.api-data p {
+  margin: 0.15rem 0;
+}
+
+/* ===== EMPTY STATE ===== */
+
+.empty-state {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ===== LOADER SPINNER ===== */
+
+.loader-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  border-top-color: #e5e7eb;
+  border-right-color: #e5e7eb;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 640px) {
+  .app-container {
+    margin: 1.2rem;
+    padding: 1.2rem 1rem 1.6rem;
+  }
+
+  .task-form,
+  .filter-panel {
+    flex-direction: column;
+  }
+
+  .task-actions {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
